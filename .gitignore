@@ -15,4 +15,4 @@
 # vendor/
 
 # Coding challenge-specific
-resources/output.jsonld
+resources/output.jsonl
