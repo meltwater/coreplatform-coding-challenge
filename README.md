@@ -24,3 +24,25 @@ To minimise the amount of time needed to get up and running with the coding chal
 *   Benthos plugin examples repo: [https://github.com/benthosdev/benthos-plugin-example](https://github.com/benthosdev/benthos-plugin-example)
 
 This is the actual git repo you will be working from. During the challenge, you will be asked to fork this repo in order to create a Pull Request that we will review together with a couple of members of the team.
+
+## Equipment
+
+Feel free to bring your own laptop to use. We can supply one if needed, but please let us know first.
+
+## Contents
+
+Within this repo we have all you need to get going. In the `resources` directory you will find a sample input file containing new-line delimited json. You'll also find a `benthos.yaml` which is a simple config that will start benthos, read the input file, use the custom plugin and then write to the output file.
+
+## Usage
+
+Go `1.13` is required. First fetch the dependencies
+
+```
+go get
+```
+
+Run benthos with the config we have created for you
+
+```
+go run ./main.go -c resources/benthos.yaml
+```

@@ -1,11 +1,20 @@
 input:
   file:
-    path: resources/input.jsonld
+    path: resources/input.jsonl
 
 output:
   file:
-    path: resources/output.jsonld
+    path: resources/output.jsonl
 
 pipeline:
   processors:
-    - type: coding_challenge
+    - json:
+        operator: copy
+        path: raw_links
+        value: processed_links
+    - process_field:
+        codec: json
+        path: processed_links
+        processors:
+          - type: coding_challenge
+        result_type: array
