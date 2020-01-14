@@ -1,0 +1,11 @@
+input:
+  file:
+    path: resources/input.jsonld
+
+output:
+  file:
+    path: resources/output.jsonld
+
+pipeline:
+  processors:
+    - type: coding_challenge
